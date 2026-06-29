@@ -7,25 +7,40 @@ sudo apt install -y \
     clangd \
     clang-format \
     fonts-jetbrains-mono \
+    golang \
     curl \
     git
+
+echo "==> Setting up npm global directory..."
+mkdir -p ~/.npm-global
+npm config set prefix ~/.npm-global
+export PATH=$HOME/.npm-global/bin:$PATH
+if ! grep -q 'npm-global' ~/.bashrc; then
+    echo 'export PATH=$HOME/.npm-global/bin:$PATH' >> ~/.bashrc
+fi
+
+echo "==> Installing Node.js global packages..."
+if command -v npm &> /dev/null; then
+    npm install -g pyright typescript typescript-language-server prettier
+else
+    echo "WARNING: npm not found, skipping Node.js packages. Install Node.js then re-run."
+fi
 
 echo "==> Installing Python formatter..."
 pip install black --break-system-packages
 
-echo "==> Installing JS/TS formatter..."
-if command -v npm &> /dev/null; then
-    npm install -g prettier
+echo "==> Installing Rust + components..."
+if ! command -v rustup &> /dev/null; then
+    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+    source "$HOME/.cargo/env"
 else
-    echo "WARNING: npm not found, skipping prettier. Install Node.js then run: npm install -g prettier"
+    echo "rustup already installed"
+    source "$HOME/.cargo/env"
 fi
+rustup component add rust-analyzer rustfmt
 
-echo "==> Installing rustfmt..."
-if command -v rustup &> /dev/null; then
-    rustup component add rustfmt
-else
-    echo "WARNING: rustup not found, skipping rustfmt. Install rustup then run: rustup component add rustfmt"
-fi
+echo "==> Installing gopls..."
+go install golang.org/x/tools/gopls@latest
 
 echo "==> Installing Sublime Text..."
 if ! command -v subl &> /dev/null; then
@@ -53,4 +68,4 @@ echo "Linked $REPO_DIR -> $SUBLIME_USER"
 
 echo ""
 echo "==> Done! Open Sublime Text and Package Control will auto-install all packages."
-echo "    NOTE: If rustup/npm were missing, install them and re-run the relevant commands above."
+echo "    You may need to restart your shell or run: source ~/.bashrc"
