@@ -10,15 +10,14 @@
         "LSP",
         "LSP-clangd",
         "LSP-gopls",
+        "LSP-pyright",
         "LSP-rust-analyzer",
         "LSP-typescript",
         "Package Control",
+        "Rosé Pine",
         "SideBarEnhancements",
         "SublimeDebugger",
         "Theme - Rose Pine",
-        "x86 and x86_64 Assembly",
-    ],
-    "in_process_packages":
-    [
-    ],
+        "x86 and x86_64 Assembly"
+    ]
 }
