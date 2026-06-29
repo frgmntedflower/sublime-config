@@ -1,0 +1,9 @@
+[
+    {
+        "keys": ["ctrl+j"],
+        "command": "exec",
+        "args": {
+            "cmd": ["bash", "-c", "gnome-terminal &"]
+        }
+    }
+]

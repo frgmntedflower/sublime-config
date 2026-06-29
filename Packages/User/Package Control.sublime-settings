@@ -7,6 +7,7 @@
         "Discord Rich Presence",
         "FileIcons",
         "Fmt",
+        "LiveReload",
         "LSP",
         "LSP-clangd",
         "LSP-gopls",
@@ -17,8 +18,11 @@
         "Rosé Pine",
         "SideBarEnhancements",
         "SublimeDebugger",
-        "Terminus",
         "Theme - Rose Pine",
-        "x86 and x86_64 Assembly"
-    ]
+        "x86 and x86_64 Assembly",
+    ],
+    "in_process_packages":
+    [
+    ],
+    "bootstrapped": true,
 }
