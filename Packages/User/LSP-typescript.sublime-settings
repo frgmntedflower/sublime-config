@@ -1,0 +1,6 @@
+{
+    "settings": {
+        "typescript.inlayHints.parameterNames.enabled": "all",
+        "typescript.inlayHints.returnTypes.enabled": true
+    }
+}

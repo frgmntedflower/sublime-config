@@ -1,0 +1,7 @@
+{
+    "settings": {
+        "gopls.usePlaceholders": true,
+        "gopls.completeUnimported": true,
+        "gopls.staticcheck": true
+    }
+}
