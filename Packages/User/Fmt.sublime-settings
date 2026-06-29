@@ -1,0 +1,28 @@
+{
+    "rules": [
+        {
+            "selector": "source.c | source.c++ | source.objc",
+            "cmd": ["clang-format", "--style=file", "$file"],
+            "format_on_save": true,
+            "merge_type": "diff"
+        },
+        {
+            "selector": "source.rust",
+            "cmd": ["rustfmt", "$file"],
+            "format_on_save": true,
+            "merge_type": "diff"
+        },
+        {
+            "selector": "source.python",
+            "cmd": ["black", "$file"],
+            "format_on_save": true,
+            "merge_type": "diff"
+        },
+        {
+            "selector": "source.js | source.ts | source.json",
+            "cmd": ["prettier", "--write", "$file"],
+            "format_on_save": true,
+            "merge_type": "diff"
+        }
+    ]
+}

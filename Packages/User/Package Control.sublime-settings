@@ -1,0 +1,19 @@
+{
+    "installed_packages":
+    [
+        "A File Icon",
+        "CMake",
+        "CMakeBuilder",
+        "FileIcons",
+        "Fmt",
+        "LSP",
+        "LSP-clangd",
+        "Package Control",
+        "SideBarEnhancements",
+        "SublimeDebugger",
+        "Theme - Rose Pine",
+    ],
+    "in_process_packages":
+    [
+    ],
+}

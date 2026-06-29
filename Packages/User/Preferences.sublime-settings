@@ -1,0 +1,18 @@
+{
+    "font_face": "JetBrains Mono",
+    "font_size": 11,
+    "theme": "Rosé Pine.sublime-theme",
+    "color_scheme": "Rosé Pine.sublime-color-scheme",
+    "rulers": [80, 120],
+    "trim_trailing_white_space_on_save": true,
+    "ensure_newline_at_eof_on_save": true,
+    "translate_tabs_to_spaces": true,
+    "tab_size": 4,
+    "show_encoding": true,
+    "show_line_endings": true,
+    "highlight_line": true,
+    "scroll_past_end": true,
+    "sidebar_default": true,
+    "folder_exclude_patterns": [".git", "build", "node_modules", "__pycache__"],
+    "file_exclude_patterns": ["*.pyc", "*.o", "*.a"]
+}
