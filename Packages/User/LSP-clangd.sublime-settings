@@ -1,5 +1,6 @@
 {
-    "initializationOptions": {
-        "clangd.compile-commands-dir": "build"
+    "settings": {
+        "clangd.diagnostics.unusedIncludes": "None",
+        "clangd.diagnostics.missingIncludes": "None"
     }
 }

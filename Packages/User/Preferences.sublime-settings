@@ -15,8 +15,6 @@
     "sidebar_default": true,
     "folder_exclude_patterns": [".git", "build", "node_modules", "__pycache__"],
     "file_exclude_patterns": ["*.pyc", "*.o", "*.a"],
-    "ignored_packages":
-    [
-		"Vintage",
-    ],
+    "ignored_packages":[],
+    "index_files": true,
 }

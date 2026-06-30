@@ -2,5 +2,11 @@
     "show_diagnostics_panel_on_save": 0,
     "diagnostics_delay_ms": 300,
     "show_inlay_hints": true,
-    "lsp_format_on_save": true
+    "lsp_format_on_save": false,
+    "code_action_on_save": {},
+    "clients": {
+        "clangd": {
+            "code_action_on_save": {}
+        }
+    }
 }

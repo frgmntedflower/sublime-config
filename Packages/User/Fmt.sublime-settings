@@ -2,7 +2,7 @@
     "rules": [
         {
             "selector": "source.c | source.c++ | source.objc",
-            "cmd": ["clang-format", "--style=file", "$file"],
+            "cmd": ["clang-format", "--style=file", "--assume-filename=$file"],
             "format_on_save": true,
             "merge_type": "diff"
         },
